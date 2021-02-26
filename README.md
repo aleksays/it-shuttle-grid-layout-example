@@ -1,6 +1,7 @@
 # it-shuttle-grid-layout-example
 
 Example grid layout usage.
-**[Codesandbox code example](https://codesandbox.io/s/7mdqy)**
-**[Full size example from sandbox](https://7mdqy.csb.app/)**
-**[Figma](https://www.figma.com/file/A5ZAno7500zX1ld5ttCLMv/Grid-layout-task?node-id=0%3A3)**
+
+- **[Codesandbox code example](https://codesandbox.io/s/7mdqy)**
+- **[Full size example from sandbox](https://7mdqy.csb.app/)**
+- **[Figma](https://www.figma.com/file/A5ZAno7500zX1ld5ttCLMv/Grid-layout-task?node-id=0%3A3)**
