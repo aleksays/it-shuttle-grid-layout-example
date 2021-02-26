@@ -1,6 +1,7 @@
 # it-shuttle-grid-layout-example
 
 Example grid layout usage.
+![Figma layout example](/grid-layout-example.jpg "Figma layout example")
 
 - **[Codesandbox code example](https://codesandbox.io/s/7mdqy)**
 - **[Full size example from sandbox](https://7mdqy.csb.app/)**
