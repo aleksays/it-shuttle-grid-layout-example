@@ -1,0 +1,178 @@
+:root {
+  --blue-color: #1e82dd;
+  --dark-color: #555555;
+  --dimmed-red-color: #e18080;
+  --dimmed-blue-color: #85acda;
+  --dimmed-green-color: #d5dd73;
+  --bg-color: #e1e1e1;
+
+  /* gradients */
+  --blue-gradient: linear-gradient(180deg, #34d5df 0%, #2040af 100%);
+  --violet-gradient: linear-gradient(180deg, #df3472 0%, #8a20af 100%);
+  --green-gradient: linear-gradient(180deg, #28bfe0 0%, #4dc722 100%);
+  --red-gradient: linear-gradient(180deg, #ea1313 0%, #e47916 100%);
+
+  /* gaps */
+  --gap: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  padding-bottom: var(--gap);
+  background-color: var(--bg-color);
+}
+
+p {
+  line-height: 21px;
+}
+
+button,
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.whitebox {
+  background-color: white;
+  border-radius: 6px;
+  padding: var(--gap);
+}
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 347px;
+  grid-template-rows: 100px 1fr 146px;
+  gap: var(--gap);
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer aside";
+  padding: 0 var(--gap);
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--blue-color);
+  margin: 0 -20px;
+}
+
+.main {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--dark-color);
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: repeat(3, 100px);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.main-grid__item:nth-child(odd) {
+  grid-column: 1 / 3;
+}
+.main-grid__item:nth-child(1),
+.main-grid__item:nth-child(4),
+.main-grid__item:nth-child(5) {
+  background-color: var(--dimmed-red-color);
+}
+
+.main-grid__item:nth-child(2),
+.main-grid__item:nth-child(6) {
+  background-color: var(--dimmed-blue-color);
+}
+
+.main-grid__item:nth-child(3) {
+  background-color: var(--dimmed-green-color);
+}
+
+.main-grid__item:nth-child(5) {
+  grid-column: 1 / 2;
+  grid-row: 3 / -1;
+}
+.main-grid__item:nth-child(6) {
+  grid-column: 2 / -1;
+  grid-row: 3 / -1;
+}
+
+.main__text {
+  margin-bottom: var(--gap);
+}
+.main__text:last-of-type {
+  margin-bottom: 53px;
+}
+
+.aside__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  height: 100%;
+}
+
+.aside__list-item {
+  flex: 1 1 calc(100% / 4);
+}
+.aside__list-item:nth-child(1) {
+  background: var(--blue-gradient);
+}
+.aside__list-item:nth-child(2) {
+  background: var(--violet-gradient);
+}
+.aside__list-item:nth-child(3) {
+  background: var(--green-gradient);
+}
+.aside__list-item:nth-child(4) {
+  background: var(--red-gradient);
+}
+
+/* 
+Version 2 of aside list styles.
+Rename class in html file to .aside__list-v2 for list for using grid-layout instead flexbox.
+ */
+.aside__list-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  row-gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.aside__list-v2 .aside__list-item {
+  flex: none;
+}
